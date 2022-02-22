@@ -7,7 +7,6 @@ RSpec.describe 'Studio Index page' do
     universal = Studio.create!(name: 'Universal Studios', location: 'Anaheim, CA')
 
     visit 'studios'
-    save_and_open_page
 
     expect(page).to have_content('Studios')
     expect(page).to have_content("Name: #{mgm.name}")
@@ -28,6 +27,7 @@ RSpec.describe 'Studio Index page' do
     risky = universal.movies.create!(title: 'Risky Business', creation_year: 1983, genre: 'Comedy')
 
     visit 'studios'
+    # save_and_open_page
     expect(page).to have_content(mission.title)
     expect(page).to have_content(firm.title)
     expect(page).to have_content(risky.title)

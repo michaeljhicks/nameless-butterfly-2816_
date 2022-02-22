@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   get '/studios', to: 'studios#index'
   get '/movies/:id', to: 'movies#show'
+  get '/movies/:id/update', to: 'movies#update'
+  post '/movies/:id/update', to: 'movies#update'
 end

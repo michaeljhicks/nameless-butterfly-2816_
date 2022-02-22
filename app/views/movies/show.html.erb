@@ -8,3 +8,5 @@
 <% end %>
 
 <p>Average Actor Age in this Film: <%= @movie.actor_avg_age %></p>
+
+<%= link_to "Add Actor", "/movies/#{@movie.id}/update" %>
